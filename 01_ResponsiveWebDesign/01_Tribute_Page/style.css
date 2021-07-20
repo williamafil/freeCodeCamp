@@ -1,0 +1,53 @@
+body {
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+#main {
+  padding: 10px;
+  background-color: #eee;
+  border: 10px #fff solid;
+  border-radius: 20px;
+  /* margin: 0 auto; */
+}
+
+#title,
+#title + p {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 10px 0;
+  padding: 0;
+}
+
+#img-div {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+img {
+  text-align: center;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#img-caption {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 15px 0 5px 0;
+}
+
+#main h2 {
+  text-align: center;
+}
+
+ul li {
+  margin: 10px auto;
+  max-width: 600px;
+}
