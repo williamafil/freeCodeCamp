@@ -1,10 +1,305 @@
-.container {
-  width: 100%;
-  background-color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
+html,
+body {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  /* font-family: "Nunito", sans-serif; */
+  font-family: "Work Sans", sans-serif;
+}
+
+a {
+  font-family: "Nunito", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  /* background-color: #eee; */
+}
+
+#navbar {
+  position: fixed;
+  background-color: tomato;
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.5);
+  z-index: 10;
+}
+
+#navbar ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 1rem; */
+}
+
+#navbar a {
+  display: block;
+  margin: 0 0.7rem;
+  padding: 0 0.1rem;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+}
+
+#navbar a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.main-content {
+  /* padding-top: 4rem; */
+}
+
+#welcome-section,
+#about,
+#projects,
+#contact {
+  height: calc(100vh);
+  display: flex;
+  /* flex-direction: column; */
+}
+
+#welcome-section {
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.scroll-to-about {
+  position: absolute;
+  bottom: 150px;
+}
+
+.scroll-to-about:hover::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: rotate(-45deg);
+  font-weight: 700;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.scroll-to-about:hover::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: rotate(-45deg);
+  font-weight: 700;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+#welcome-section > div {
+  /* background-color: #fff; */
+  padding: 1.3rem;
+  width: 85%;
+  line-height: 2rem;
+}
+
+#welcome-section h1,
+#welcome-section h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#welcome-section h1 {
+  margin-bottom: 0.75rem;
+}
+
+#about,
+#projects,
+#contact {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+*
+*   ABOUT
+*
+*/
+
+#about {
+  background-color: rgb(247, 219, 219);
+}
+
+#about .section-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.section-heading > h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading > h2::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 100px;
+  height: 20px;
+}
+
+.about-me-list {
+  width: 80%;
+  align-self: center;
+}
+.about-me-list li {
+  padding-left: 1rem;
+  position: relative;
+  margin: 0.75rem 0;
+}
+
+.about-me-list li:first-child::before {
+  content: "💘";
+  position: absolute;
+  left: -10px;
+  top: -5px;
+}
+.about-me-list li:nth-child(2)::before {
+  content: "👐";
+  position: absolute;
+  left: -10px;
+  top: -5px;
+}
+.about-me-list li:nth-child(3)::before {
+  content: "💦";
+  position: absolute;
+  left: -10px;
+  top: -5px;
+}
+.about-me-list li:last-child::before {
+  content: "🤟";
+  position: absolute;
+  left: -10px;
+  top: -5px;
+}
+
+/*
+*
+*   PROJECTS
+*
+*/
+
+#projects {
+  background-color: antiquewhite;
+}
+
+.project-tile-container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-tile {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.project-tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-tile h3 {
+  text-align: center;
+  color: rgb(34, 34, 34);
+  font-family: "Nunito", sans-serif;
+  padding: 0.5rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.project-tile h3:hover::before {
+  content: "<";
+  color: tomato;
+  font-weight: 700;
+  position: absolute;
+  left: -0.8rem;
+}
+
+.project-tile h3:hover::after {
+  content: "/>";
+  color: tomato;
+  font-weight: 700;
+  position: absolute;
+  right: -1.2rem;
+}
+
+/*
+*
+*   CONTACT
+*
+*/
+
 @media (min-width: 414px) {
+  html,
+  body {
+    font-size: 24px;
+  }
   .container {
-    background-color: #ccc;
+    background-color: #ddd;
+  }
+}
+
+@media (min-width: 600px) {
+  .project-tile-container {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+  .project-tile {
+    width: 28%;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  #welcome-section h1,
+  #welcome-section h2 {
+    display: flex;
+    justify-content: center;
   }
 }
